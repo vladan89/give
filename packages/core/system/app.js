@@ -21,7 +21,21 @@ SystemPackage.register(function(app, auth, database, circles) {
 
   SystemPackage.aggregateAsset('css', 'common.css');
   SystemPackage.angularDependencies(['ui.router', 'mean-factory-interceptor']);
-  
+
+  // Lib Aggrgated Files
+  var libDir = '../lib/';
+  SystemPackage.aggregateAsset('css', libDir + 'css/style.css');
+  SystemPackage.aggregateAsset('css', libDir + 'css/bootstrap-theme.css');
+  SystemPackage.aggregateAsset('css', libDir + 'css/font-awesome.css');
+  SystemPackage.aggregateAsset('css', libDir + 'css/font-awesome-ie7.css');
+
+  // Javascript
+  SystemPackage.aggregateAsset('js', libDir + 'js/bootstrap.js');
+  SystemPackage.aggregateAsset('js', libDir + 'js/html5.js');
+  SystemPackage.aggregateAsset('js', libDir + 'js/rebound.js');
+  SystemPackage.aggregateAsset('js', libDir + 'js/respond.src.js');
+  SystemPackage.aggregateAsset('js', libDir + 'js/typeahead.min.js');
+  SystemPackage.aggregateAsset('js', libDir + 'js/jquery.isotope.min.js');
 
   // The middleware in config/express will run before this code
 
